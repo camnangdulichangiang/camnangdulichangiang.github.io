@@ -39,7 +39,7 @@ nav a:hover{
 }
 
 .banner{
-    background:url("images/banner-ag.jpg") center/cover no-repeat;
+    background:url("banner-ag.jpg") center/cover no-repeat;
     height:520px;
     position:relative;
 }
