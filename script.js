@@ -385,9 +385,5 @@ function xemDiem() {
 function lenDauTrang() {
   window.scrollTo({top:0,behavior:"smooth"});
 }
-function dungThuyetMinh() {
-    dangDoc = false;
-    hangDoiDoc = [];
-    window.speechSynthesis.cancel();
-}
+
 
