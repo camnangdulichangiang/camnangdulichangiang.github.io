@@ -202,6 +202,11 @@ function xemChiTiet(key) {
   const data = duLieu[key];
   const noiDung = document.getElementById("noi-dung-chi-tiet");
 
+  if (!noiDung) {
+    alert("Chưa có khung hiển thị chi tiết.");
+    return;
+  }
+
   if (!data) {
     noiDung.innerHTML = "<p>Chưa có dữ liệu cho địa điểm này.</p>";
     return;
@@ -236,9 +241,11 @@ function xemChiTiet(key) {
     <button class="btn-audio" onclick="ngheThuyetMinh('${key}')">
       🔊 English Audio Guide
     </button>
-<button class="btn-stop" onclick="dungThuyetMinh()">
-  ⏹ Stop Audio
-</button>
+
+    <button class="btn-stop" onclick="dungThuyetMinh()">
+      ⏹ Stop Audio
+    </button>
+
     <div class="map-box">
       <iframe src="${data.bando}" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
