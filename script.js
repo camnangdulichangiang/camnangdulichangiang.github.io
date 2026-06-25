@@ -12,7 +12,10 @@ const duLieu = {
     amthuc:"Bún cá Châu Đốc, mắm Châu Đốc, bánh bò thốt nốt",
     khachsan:"Victoria Châu Đốc, Marina Plaza Hotel",
     goiy:"Nên kết hợp tham quan Lăng Thoại Ngọc Hầu và Tây An Cổ Tự.",
-    audio_en:"Welcome to Ba Chua Xu Temple on Sam Mountain. This is one of the most famous spiritual destinations in An Giang.",
+    audio_en:"Welcome to Ba Chua Xu Temple on Sam Mountain. This is one of the most famous spiritual destinations in An Giang. Located at the foot of Sam Mountain in Chau Doc, An Giang, this sacred temple welcomes many visitors every year. People come here to pray for health, peace, happiness, and success, and also to learn about the spiritual culture of the Mekong Delta.
+The temple is known for its traditional architecture, peaceful atmosphere, and the annual Ba Chua Xu Festival. This festival is an important cultural event, attracting pilgrims and tourists from many places.
+When visiting this destination, you can also explore nearby places such as Tay An Pagoda, Thoai Ngoc Hau Mausoleum, and Sam Mountain. Local foods such as Chau Doc fish noodle soup, palm sugar cakes, and fermented fish products are also worth trying.
+Thank you for using the Smart An Giang Travel Guide. We hope you enjoy your visit and have a wonderful journey.",
     bando:"https://www.google.com/maps?q=Miếu%20Bà%20Chúa%20Xứ%20Núi%20Sam&output=embed"
   },
 
