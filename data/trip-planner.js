@@ -23,18 +23,84 @@ function taoLichTrinh(){
 
     result.style.display="block";
 
-    result.innerHTML=`
-        <h3>🤖 AI Guide 3.0</h3>
+    let lichTrinh = "";
 
-        <p><b>Số ngày:</b> ${days}</p>
+if(style=="tamlinh"){
 
-        <p><b>Ngân sách:</b> ${budget}</p>
+    lichTrinh=`
 
-        <p><b>Sở thích:</b> ${style}</p>
+    <h3>🤖 AI Guide 3.0</h3>
 
-        <hr>
+    <h4>📅 NGÀY 1</h4>
 
-        <p>✅ AI đang phân tích và sẽ tạo lịch trình ở phiên bản tiếp theo.</p>
+    <p>🌄 07:30 Miếu Bà Chúa Xứ</p>
+
+    <p>🏞 09:00 Núi Sam</p>
+
+    <p>🍜 11:30 Bún cá Châu Đốc</p>
+
+    <p>🛕 14:00 Chùa Hang</p>
+
+    <p>🏨 18:00 Nghỉ khách sạn</p>
+
     `;
+
+}
+
+else if(style=="amthuc"){
+
+    lichTrinh=`
+
+    <h3>🤖 AI Guide 3.0</h3>
+
+    <h4>📅 NGÀY 1</h4>
+
+    <p>🍜 Bún cá Châu Đốc</p>
+
+    <p>🥩 Bò Bảy Núi</p>
+
+    <p>🐔 Gà đốt Ô Thum</p>
+
+    <p>🍰 Bánh bò thốt nốt</p>
+
+    <p>☕ Cà phê ven sông</p>
+
+    `;
+
+}
+
+else if(style=="thiennhien"){
+
+    lichTrinh=`
+
+    <h3>🤖 AI Guide 3.0</h3>
+
+    <h4>📅 NGÀY 1</h4>
+
+    <p>🌳 Rừng Tràm Trà Sư</p>
+
+    <p>🏔 Hồ Tà Pạ</p>
+
+    <p>🌾 Đồi Tức Dụp</p>
+
+    <p>🌅 Núi Cấm</p>
+
+    `;
+
+}
+
+else{
+
+    lichTrinh=`
+
+    <h3>🤖 AI Guide 3.0</h3>
+
+    <p>AI đang cập nhật dữ liệu...</p>
+
+    `;
+
+}
+
+result.innerHTML = lichTrinh;
 
 }
