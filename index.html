@@ -186,7 +186,43 @@ Xin chào!
 Tôi là AI Guide của Cẩm nang du lịch An Giang thông minh.
 Hãy nhập câu hỏi hoặc nhu cầu của bạn, tôi sẽ gợi ý địa điểm phù hợp.
 </p>
+<div class="trip-planner">
 
+<h3>🗺️ AI Lập lịch trình thông minh</h3>
+
+<label>📅 Thời gian</label>
+<select id="tripDays">
+    <option value="">-- Chọn số ngày --</option>
+    <option value="1">1 ngày</option>
+    <option value="2">2 ngày</option>
+    <option value="3">3 ngày</option>
+</select>
+
+<label>💰 Ngân sách</label>
+<select id="tripBudget">
+    <option value="">-- Chọn ngân sách --</option>
+    <option value="thap">Dưới 1 triệu</option>
+    <option value="trungbinh">1 - 3 triệu</option>
+    <option value="cao">Trên 3 triệu</option>
+</select>
+
+<label>❤️ Sở thích</label>
+<select id="tripStyle">
+    <option value="">-- Chọn sở thích --</option>
+    <option value="thiennhien">🌿 Thiên nhiên</option>
+    <option value="tamlinh">🛕 Tâm linh</option>
+    <option value="amthuc">🍜 Ẩm thực</option>
+    <option value="giadinh">👨‍👩‍👧 Gia đình</option>
+    <option value="checkin">📸 Check-in</option>
+</select>
+
+<button id="btnTripPlan">
+🤖 Tạo lịch trình
+</button>
+
+<div id="tripResult"></div>
+
+</div>
 <div class="chat-container">
 
 <div id="chatHistory" class="chat-history">
