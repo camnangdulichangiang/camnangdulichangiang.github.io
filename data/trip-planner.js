@@ -108,25 +108,83 @@ function taoLichTrinh(){
 
     }
 
-    else if(style=="thiennhien"){
+   else if(style=="thiennhien"){
 
-        lichTrinh=`
+    lichTrinh = `
 
-        <h3>🤖 AI Guide 3.0</h3>
+    <h3>🤖 AI Guide 4.0</h3>
 
-        <h4>📅 NGÀY 1</h4>
+    <h3 style="color:green;">🌿 Hành trình thiên nhiên ${days} ngày</h3>
 
-        <p>🌳 Rừng Tràm Trà Sư</p>
+    <hr>
 
-        <p>🏔 Hồ Tà Pạ</p>
+    <h4>🗓️ NGÀY 1</h4>
 
-        <p>🌾 Đồi Tức Dụp</p>
+    <p>🌳 07:30 Rừng Tràm Trà Sư</p>
 
-        <p>🌅 Núi Cấm</p>
+    <p>🚣 09:00 Đi xuồng xuyên rừng</p>
+
+    <p>🦅 11:30 Quan sát chim trời</p>
+
+    <p>🍽️ 12:00 Ăn đặc sản cá linh - bông điên điển</p>
+
+    <p>🏞️ 14:00 Hồ Tà Pạ</p>
+
+    <p>🏨 18:00 Nghỉ khách sạn Châu Đốc</p>
+
+    `;
+
+    if(days >= 2){
+
+        lichTrinh += `
+
+        <hr>
+
+        <h4>🗓️ NGÀY 2</h4>
+
+        <p>🌄 07:30 Đồi Tức Dụp</p>
+
+        <p>🏔️ 09:30 Hồ Ô Thum</p>
+
+        <p>🍗 11:30 Thưởng thức Gà đốt Ô Thum</p>
+
+        <p>🌿 14:00 Đồng cỏ Tri Tôn</p>
+
+        <p>☕ 16:00 Café ngắm núi</p>
+
+        <p>🏨 18:00 Nghỉ khách sạn</p>
 
         `;
 
     }
+
+    if(days >= 3){
+
+        lichTrinh += `
+
+        <hr>
+
+        <h4>🗓️ NGÀY 3</h4>
+
+        <p>🏔️ 07:30 Núi Cấm</p>
+
+        <p>🚡 09:00 Đi cáp treo</p>
+
+        <p>🙏 10:30 Chùa Vạn Linh</p>
+
+        <p>🗿 11:30 Tượng Phật Di Lặc</p>
+
+        <p>🍜 13:00 Ăn đặc sản Núi Cấm</p>
+
+        <p>☕ 15:00 Café trên Núi Cấm</p>
+
+        <p>🚗 17:00 Kết thúc hành trình</p>
+
+        `;
+
+    }
+
+}
 
     else{
 
