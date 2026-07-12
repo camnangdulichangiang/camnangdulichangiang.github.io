@@ -104,25 +104,79 @@ function taoLichTrinh(){
 }
     else if(style=="amthuc"){
 
-        lichTrinh=`
+    lichTrinh = `
 
-        <h3>🤖 AI Guide 3.0</h3>
+    <h2>🤖 AI Guide 4.0</h2>
 
-        <h4>📅 NGÀY 1</h4>
+    <h3 style="color:#d35400;">🍜 Hành trình ẩm thực ${days} ngày</h3>
 
-        <p>🍜 Bún cá Châu Đốc</p>
+    <hr>
 
-        <p>🥩 Bò Bảy Núi</p>
+    <h4>📅 NGÀY 1</h4>
 
-        <p>🐔 Gà đốt Ô Thum</p>
+    <p>🍜 07:30 Bún cá Châu Đốc</p>
 
-        <p>🍰 Bánh bò thốt nốt</p>
+    <p>🥩 09:30 Bò Bảy Núi</p>
 
-        <p>☕ Cà phê ven sông</p>
+    <p>🥥 11:30 Thốt nốt tươi</p>
+
+    <p>🍰 14:00 Bánh bò thốt nốt</p>
+
+    <p>☕ 16:00 Café ven sông Châu Đốc</p>
+
+    <p>🏨 18:00 Nghỉ khách sạn</p>
+
+    `;
+
+    if(days >= 2){
+
+        lichTrinh += `
+
+        <hr>
+
+        <h4>📅 NGÀY 2</h4>
+
+        <p>🐔 07:30 Gà đốt Ô Thum</p>
+
+        <p>🥗 10:00 Gỏi sầu đâu</p>
+
+        <p>🐟 12:00 Lẩu mắm Châu Đốc</p>
+
+        <p>🥭 14:00 Thưởng thức trái cây Bảy Núi</p>
+
+        <p>🍧 16:00 Chè thốt nốt</p>
+
+        <p>🏨 18:00 Nghỉ khách sạn</p>
 
         `;
 
     }
+
+    if(days >= 3){
+
+        lichTrinh += `
+
+        <hr>
+
+        <h4>📅 NGÀY 3</h4>
+
+        <p>🍚 07:30 Cơm tấm Long Xuyên</p>
+
+        <p>🍲 09:30 Bánh canh Vĩnh Trung</p>
+
+        <p>🐠 11:30 Cá linh kho mía</p>
+
+        <p>🥮 14:00 Mua đặc sản làm quà</p>
+
+        <p>☕ 16:00 Café tổng kết hành trình</p>
+
+        <p>🚗 17:30 Kết thúc chuyến đi</p>
+
+        `;
+
+    }
+
+}
 
    else if(style=="thiennhien"){
 
