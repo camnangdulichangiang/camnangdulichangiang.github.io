@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function taoLichTrinh(){
 
     const days = parseInt(document.getElementById("tripDays").value);
-    console.log(days);
+    console.log("days =", days);
     const budget = document.getElementById("tripBudget").value;
     const style = document.getElementById("tripStyle").value;
 
