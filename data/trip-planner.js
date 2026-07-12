@@ -331,3 +331,73 @@ function taoLichTrinh(){
     }
 
 }
+    else if(style=="checkin"){
+
+    lichTrinh = `
+
+    <h2>🤖 AI Guide 4.0</h2>
+
+    <h3 style="color:#2196F3;">📸 Hành trình Check-in ${days} ngày</h3>
+
+    <hr>
+
+    <h4>📅 NGÀY 1</h4>
+
+    <p>📍 Cổng chào An Giang</p>
+    <p>🏞️ Hồ Tà Pạ</p>
+    <p>🌳 Rừng Tràm Trà Sư</p>
+    <p>🌄 Núi Cấm</p>
+
+    `;
+
+    if(days >= 2){
+
+        lichTrinh += `
+
+        <hr>
+
+        <h4>📅 NGÀY 2</h4>
+
+        <p>🛕 Miếu Bà Chúa Xứ</p>
+        <p>🏯 Chùa Hang</p>
+        <p>🏔️ Núi Sam</p>
+        <p>🌅 Hoàng hôn Châu Đốc</p>
+
+        `;
+
+    }
+
+    if(days >= 3){
+
+        lichTrinh += `
+
+        <hr>
+
+        <h4>📅 NGÀY 3</h4>
+
+        <p>🏞️ Đồi Tức Dụp</p>
+        <p>🌾 Cánh đồng Tri Tôn</p>
+        <p>☕ Café view núi</p>
+        <p>🚗 Kết thúc hành trình</p>
+
+        `;
+
+    }
+
+}
+
+else{
+
+    lichTrinh = `
+
+    <h2>🤖 AI Guide 4.0</h2>
+
+    <p>⚠️ Vui lòng chọn đầy đủ thông tin.</p>
+
+    `;
+
+}
+
+result.innerHTML = lichTrinh;
+
+}
