@@ -256,18 +256,78 @@ function taoLichTrinh(){
 
 }
 
-    else{
+    else if(style=="giadinh"){
 
-        lichTrinh=`
+    lichTrinh = `
 
-        <h3>🤖 AI Guide 3.0</h3>
+    <h2>🤖 AI Guide 4.0</h2>
 
-        <p>AI đang cập nhật dữ liệu...</p>
+    <h3 style="color:#2E8B57;">👨‍👩‍👧 Hành trình gia đình ${days} ngày</h3>
+
+    <hr>
+
+    <h4>📅 NGÀY 1</h4>
+
+    <p>🌳 07:30 Rừng Tràm Trà Sư</p>
+
+    <p>🚣 09:00 Đi xuồng ngắm rừng</p>
+
+    <p>🍜 11:30 Ăn trưa tại Trà Sư</p>
+
+    <p>🏞️ 14:00 Hồ Tà Pạ</p>
+
+    <p>🍦 16:00 Thưởng thức kem và nước giải khát</p>
+
+    <p>🏨 18:00 Nghỉ khách sạn</p>
+
+    `;
+
+    if(days >= 2){
+
+        lichTrinh += `
+
+        <hr>
+
+        <h4>📅 NGÀY 2</h4>
+
+        <p>🏔️ 07:30 Núi Cấm</p>
+
+        <p>🚡 09:00 Đi cáp treo</p>
+
+        <p>🙏 10:30 Chùa Vạn Linh</p>
+
+        <p>🍗 12:00 Ăn trưa tại Núi Cấm</p>
+
+        <p>📸 15:00 Chụp ảnh toàn cảnh</p>
+
+        <p>🏨 18:00 Nghỉ khách sạn</p>
 
         `;
 
     }
 
-    result.innerHTML = lichTrinh;
+    if(days >= 3){
+
+        lichTrinh += `
+
+        <hr>
+
+        <h4>📅 NGÀY 3</h4>
+
+        <p>🛕 07:30 Miếu Bà Chúa Xứ</p>
+
+        <p>🏯 09:00 Chùa Tây An</p>
+
+        <p>🕌 10:30 Lăng Thoại Ngọc Hầu</p>
+
+        <p>🍜 12:00 Bún cá Châu Đốc</p>
+
+        <p>🛍️ 15:00 Mua đặc sản làm quà</p>
+
+        <p>🚗 17:00 Kết thúc chuyến đi</p>
+
+        `;
+
+    }
 
 }
