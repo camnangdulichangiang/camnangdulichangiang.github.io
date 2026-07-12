@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("Trip Planner 3.0 đã được tải");
 
     const btn = document.getElementById("btnTripPlan");
 
