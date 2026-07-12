@@ -29,61 +29,77 @@ function taoLichTrinh(){
 
     if(style=="tamlinh"){
 
-    lichTrinh=`
+    lichTrinh = `
+
     <h2>🤖 AI Guide 4.0</h2>
 
-    <h3>🛕 Hành trình tâm linh ${days} ngày</h3>
+    <h3 style="color:#c0392b;">🛕 Hành trình tâm linh ${days} ngày</h3>
 
     <hr>
 
-    <h4>📅 Ngày 1</h4>
+    <h4>📅 NGÀY 1</h4>
 
     <p>🕢 07:30 Miếu Bà Chúa Xứ</p>
-    <p>🕘 09:00 Núi Sam</p>
+
+    <p>🏞️ 09:00 Núi Sam</p>
+
     <p>🍜 11:30 Bún cá Châu Đốc</p>
+
     <p>🙏 14:00 Chùa Hang</p>
-    <p>🏨18:00 Nghỉ khách sạn</p>
 
-    <hr>
+    <p>🏨 18:00 Nghỉ khách sạn Châu Đốc</p>
 
-   <hr>
+    `;
 
-    <h3 style="color:#00796B">
-    📅 NGÀY 2
-    </h3>
+    if(days >= 2){
 
-        <p>🛕 Chùa Tây An</p>
-        <p>🏯 Lăng Thoại Ngọc Hầu</p>
-        <p>🕌 Làng Chăm Châu Giang</p>
-        <p>☕ Café ven sông</p>
+        lichTrinh += `
+
+        <hr>
+
+        <h4>📅 NGÀY 2</h4>
+
+        <p>🛕 07:30 Chùa Tây An</p>
+
+        <p>🏯 09:00 Lăng Thoại Ngọc Hầu</p>
+
+        <p>🕌 10:30 Làng Chăm Châu Giang</p>
+
+        <p>🍽️ 12:00 Đặc sản Châu Đốc</p>
+
+        <p>☕ 15:00 Café ven sông Hậu</p>
+
+        <p>🏨 18:00 Nghỉ khách sạn</p>
 
         `;
 
     }
 
-    if(days>=3){
+    if(days >= 3){
 
-    lichTrinh += `
+        lichTrinh += `
 
-    <hr>
+        <hr>
 
-    <h3 style="color:#00796B">📅 NGÀY 3</h3>
+        <h4>📅 NGÀY 3</h4>
 
-    <p>🏞️ Núi Cấm</p>
+        <p>🏔️ 07:30 Núi Cấm</p>
 
-    <p>🙏 Chùa Vạn Linh</p>
+        <p>🙏 09:00 Chùa Vạn Linh</p>
 
-    <p>🗼 Tượng Phật Di Lặc</p>
+        <p>🗿 10:30 Tượng Phật Di Lặc</p>
 
-    <p>🌄 Hồ Thủy Liêm</p>
+        <p>🌄 13:30 Hồ Thủy Liêm</p>
 
-    <p>🍗 Gà đốt Ô Thum</p>
+        <p>🍗 15:00 Gà đốt Ô Thum</p>
 
-    <p>☕ Café trên Núi Cấm</p>
+        <p>☕ 16:30 Café Núi Cấm</p>
 
-    <p>🚗 Kết thúc hành trình</p>
+        <p>🚗 17:30 Kết thúc hành trình</p>
 
-    `;
+        `;
+
+    }
 
 }
     else if(style=="amthuc"){
