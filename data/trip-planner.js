@@ -28,25 +28,53 @@ function taoLichTrinh(){
 
     if(style=="tamlinh"){
 
-        lichTrinh=`
+    lichTrinh=`
+    <h2>🤖 AI Guide 4.0</h2>
 
-        <h3>🤖 AI Guide 3.0</h3>
+    <h3>🛕 Hành trình tâm linh ${days} ngày</h3>
 
-        <h4>📅 NGÀY 1</h4>
+    <hr>
 
-        <p>🌄 07:30 Miếu Bà Chúa Xứ</p>
+    <h4>📅 Ngày 1</h4>
 
-        <p>🏞 09:00 Núi Sam</p>
+    <p>🕢 07:30 Miếu Bà Chúa Xứ</p>
+    <p>🕘 09:00 Núi Sam</p>
+    <p>🍜 11:30 Bún cá Châu Đốc</p>
+    <p>🙏 14:00 Chùa Hang</p>
+    <p>🏨 18:00 Nghỉ khách sạn</p>
+    `;
 
-        <p>🍜 11:30 Bún cá Châu Đốc</p>
+    if(days>=2){
 
-        <p>🛕 14:00 Chùa Hang</p>
+        lichTrinh+=`
 
-        <p>🏨 18:00 Nghỉ khách sạn</p>
+        <h4>📅 Ngày 2</h4>
+
+        <p>🛕 Chùa Tây An</p>
+        <p>🏯 Lăng Thoại Ngọc Hầu</p>
+        <p>🕌 Làng Chăm Châu Giang</p>
+        <p>☕ Café ven sông</p>
 
         `;
 
     }
+
+    if(days>=3){
+
+        lichTrinh+=`
+
+        <h4>📅 Ngày 3</h4>
+
+        <p>🏞 Núi Cấm</p>
+        <p>🙏 Chùa Vạn Linh</p>
+        <p>🍗 Gà đốt Ô Thum</p>
+        <p>🌄 Hồ Thủy Liêm</p>
+
+        `;
+
+    }
+
+}
 
     else if(style=="amthuc"){
 
