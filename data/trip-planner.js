@@ -1,107 +1,322 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Trip Planner 3.0 đã được tải");
+/* ============================================================
+   AI TRIP PLANNER 4.0
+   Version: 4.0
+============================================================ */
 
-    const btn = document.getElementById("btnTripPlan");
+document.addEventListener("DOMContentLoaded", () => {
 
-    if (!btn) return;
+const btn=document.getElementById("btnTripPlan");
 
-    btn.addEventListener("click", taoLichTrinh);
+if(!btn) return;
+
+btn.addEventListener("click", taoLichTrinh);
 
 });
 
+
+
+const tripDatabase={
+
+tamlinh:{
+
+title:"🛕 Hành trình Tâm linh",
+
+1:[
+{
+title:"📅 NGÀY 1",
+
+items:[
+["07:30","🛕 Miếu Bà Chúa Xứ"],
+["09:00","⛰ Núi Sam"],
+["10:30","🙏 Chùa Tây An"],
+["11:45","🍜 Bún cá Châu Đốc"],
+["13:30","🏯 Lăng Thoại Ngọc Hầu"],
+["15:00","🛕 Chùa Hang"],
+["17:30","☕ Café ngắm Núi Sam"]
+]
+}
+],
+
+2:[
+
+{
+title:"📅 NGÀY 1",
+
+items:[
+["07:30","🛕 Miếu Bà Chúa Xứ"],
+["09:00","⛰ Núi Sam"],
+["10:30","🙏 Chùa Tây An"],
+["12:00","🍜 Bún cá Châu Đốc"],
+["14:00","🏯 Lăng Thoại Ngọc Hầu"],
+["16:00","🛍 Chợ Châu Đốc"]
+]
+},
+
+{
+title:"📅 NGÀY 2",
+
+items:[
+["07:30","🛕 Chùa Hang"],
+["09:00","🚤 Làng bè Châu Đốc"],
+["11:30","🍽 Cơm gà"],
+["14:00","🕌 Làng Chăm"],
+["16:00","☕ Café ven sông"]
+]
+}
+
+],
+
+3:[
+
+{
+title:"📅 NGÀY 1",
+
+items:[
+["07:30","🛕 Miếu Bà"],
+["09:00","⛰ Núi Sam"],
+["11:30","🍜 Bún cá"]
+]
+},
+
+{
+title:"📅 NGÀY 2",
+
+items:[
+["08:00","🛕 Chùa Hang"],
+["10:00","🕌 Làng Chăm"],
+["14:00","🚤 Làng bè"]
+]
+},
+
+{
+title:"📅 NGÀY 3",
+
+items:[
+["08:00","🏞 Núi Cấm"],
+["11:30","🍗 Gà đốt Ô Thum"],
+["15:00","🙏 Chùa Vạn Linh"]
+]
+}
+
+]
+
+},
+
+
+
+thiennhien:{
+
+title:"🌿 Khám phá thiên nhiên",
+
+1:[
+
+{
+
+title:"📅 NGÀY 1",
+
+items:[
+
+["07:30","🌳 Rừng Tràm Trà Sư"],
+["10:30","🚣 Đi xuồng"],
+["12:00","🍜 Ăn trưa"],
+["14:00","🦅 Quan sát chim"],
+["16:30","☕ Café"]
+
+}
+
+],
+
+2:[
+
+{
+
+title:"📅 NGÀY 1",
+
+items:[
+
+["07:30","🌳 Rừng Tràm Trà Sư"],
+["12:00","🍜 Ăn trưa"],
+["15:00","🦅 Tham quan"]
+
+},
+
+{
+
+title:"📅 NGÀY 2",
+
+items:[
+
+["07:30","🏞 Hồ Tà Pạ"],
+["10:00","📸 Check-in"],
+["12:00","🍗 Gà đốt Ô Thum"],
+["15:00","🏔 Đồi Tức Dụp"]
+
+}
+
+],
+
+3:[
+
+{
+
+title:"📅 NGÀY 1",
+
+items:[
+
+["07:30","🌳 Rừng Tràm"],
+["15:00","🚣 Đi xuồng"]
+
+},
+
+{
+
+title:"📅 NGÀY 2",
+
+items:[
+
+["08:00","🏞 Hồ Tà Pạ"],
+["13:30","🌄 Núi Cấm"]
+
+},
+
+{
+
+title:"📅 NGÀY 3",
+
+items:[
+
+["08:00","🚠 Cáp treo"],
+["10:30","🙏 Chùa Vạn Linh"],
+["15:00","☕ Café"]
+
+}
+
+]
+
+}
+
+};
+
+
+
 function taoLichTrinh(){
 
-    const days = document.getElementById("tripDays").value;
-    const budget = document.getElementById("tripBudget").value;
-    const style = document.getElementById("tripStyle").value;
+const days=parseInt(document.getElementById("tripDays").value);
 
-    const result = document.getElementById("tripResult");
+const style=document.getElementById("tripStyle").value;
 
-    if(days==="" || budget==="" || style===""){
-        alert("Vui lòng chọn đầy đủ thông tin.");
-        return;
-    }
+const budget=document.getElementById("tripBudget").value;
 
-    result.style.display="block";
+const result=document.getElementById("tripResult");
 
-    let lichTrinh = "";
+if(!tripDatabase[style]){
 
-if(style=="tamlinh"){
+result.innerHTML="<h3>Chưa có dữ liệu.</h3>";
 
-    lichTrinh=`
-
-    <h3>🤖 AI Guide 3.0</h3>
-
-    <h4>📅 NGÀY 1</h4>
-
-    <p>🌄 07:30 Miếu Bà Chúa Xứ</p>
-
-    <p>🏞 09:00 Núi Sam</p>
-
-    <p>🍜 11:30 Bún cá Châu Đốc</p>
-
-    <p>🛕 14:00 Chùa Hang</p>
-
-    <p>🏨 18:00 Nghỉ khách sạn</p>
-
-    `;
+return;
 
 }
 
-else if(style=="amthuc"){
+let html="";
 
-    lichTrinh=`
+html+=`<h2>🤖 AI Trip Planner 4.0</h2>`;
 
-    <h3>🤖 AI Guide 3.0</h3>
+html+=`<p><b>${tripDatabase[style].title}</b></p><hr>`;
 
-    <h4>📅 NGÀY 1</h4>
+tripDatabase[style][days].forEach(day=>{
 
-    <p>🍜 Bún cá Châu Đốc</p>
+html+=`<h3>${day.title}</h3>`;
 
-    <p>🥩 Bò Bảy Núi</p>
+day.items.forEach(item=>{
 
-    <p>🐔 Gà đốt Ô Thum</p>
+html+=`
 
-    <p>🍰 Bánh bò thốt nốt</p>
+<div class="trip-item">
 
-    <p>☕ Cà phê ven sông</p>
+<b>${item[0]}</b> - ${item[1]}
 
-    `;
+</div>
 
-}
+`;
 
-else if(style=="thiennhien"){
+});
 
-    lichTrinh=`
+html+="<hr>";
 
-    <h3>🤖 AI Guide 3.0</h3>
+});
 
-    <h4>📅 NGÀY 1</h4>
+html+=tinhChiPhi(budget);
 
-    <p>🌳 Rừng Tràm Trà Sư</p>
-
-    <p>🏔 Hồ Tà Pạ</p>
-
-    <p>🌾 Đồi Tức Dụp</p>
-
-    <p>🌅 Núi Cấm</p>
-
-    `;
+result.innerHTML=html;
 
 }
 
-else{
 
-    lichTrinh=`
 
-    <h3>🤖 AI Guide 3.0</h3>
+function tinhChiPhi(level){
 
-    <p>AI đang cập nhật dữ liệu...</p>
+switch(level){
 
-    `;
+case "thap":
+
+return`
+
+<h3>💰 Chi phí dự kiến</h3>
+
+<ul>
+
+<li>🚗 Di chuyển: 250.000đ</li>
+
+<li>🍜 Ăn uống: 300.000đ</li>
+
+<li>🏨 Lưu trú: 400.000đ</li>
+
+<li><b>Tổng khoảng: 950.000đ</b></li>
+
+</ul>
+
+`;
+
+case "trungbinh":
+
+return`
+
+<h3>💰 Chi phí dự kiến</h3>
+
+<ul>
+
+<li>🚗 Di chuyển: 500.000đ</li>
+
+<li>🍜 Ăn uống: 700.000đ</li>
+
+<li>🏨 Lưu trú: 900.000đ</li>
+
+<li><b>Tổng khoảng: 2.100.000đ</b></li>
+
+</ul>
+
+`;
+
+default:
+
+return`
+
+<h3>💰 Chi phí dự kiến</h3>
+
+<ul>
+
+<li>🚗 Di chuyển: 900.000đ</li>
+
+<li>🍜 Ăn uống: 1.200.000đ</li>
+
+<li>🏨 Lưu trú: 2.000.000đ</li>
+
+<li><b>Tổng khoảng: 4.100.000đ</b></li>
+
+</ul>
+
+`;
 
 }
-
-result.innerHTML = lichTrinh;
 
 }
